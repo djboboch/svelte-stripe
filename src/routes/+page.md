@@ -107,7 +107,7 @@ To use it, drop a `<PaymentElement>` component in your form:
 ```html
 <form on:submit|preventDefault="{submit}">
   <Elements {stripe} {clientSecret} bind:elements>
-    <PaymentElement options={...} />
+    <PaymentElement options="{...}" />
   </Elements>
 
   <button>Pay</button>
@@ -383,12 +383,7 @@ For more information on webhooks, see [Stripe's Webhook Docs](https://stripe.com
 Components can be styled by setting attributes on the `<Elements/>` container.
 
 ```html
-<Elements
-  theme="flat"
-  labels="floating"
-  variables={{ colorPrimary: 'pink' }}
-  rules={...}
-  />
+<Elements theme="flat" labels="floating" variables={{ colorPrimary: 'pink' }} rules={...} />
 ```
 
 See [appearance docs](https://stripe.com/docs/elements/appearance-api) for more examples.
@@ -397,6 +392,7 @@ See [appearance docs](https://stripe.com/docs/elements/appearance-api) for more 
 
 All demos are running in test-mode, any of Stripe's [test card numbers](https://stripe.com/docs/testing#cards) will work.
 
+- [Address](/examples/address)
 - [PaymentElement](/examples/payment-element)
 - [Express Checkout](/examples/express-checkout)
 - [Credit Card](/examples/credit-card)
